@@ -1,6 +1,7 @@
 .dashboardLayoutContainer {
     display: grid;
     grid-template-columns: 1fr 11fr;
+    height: 100vh;
     @media screen and (max-width: 992px) {
         grid-template-columns: 1fr;
         
@@ -26,16 +27,13 @@
                 }
             }
         }
-        .brandTitle {
-            color: var(--Primary-color, #333);
-            font-family: var(--Mulish);
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            @media screen and (max-width: 576px) {
-                display: none;
-           }
+        .searchContainer {
+            input{
+                height: 30px;
+                outline: 0;
+                border-radius: 8px;
+                padding: 8px;
+            }
         }
 
         .topButtonContainer {
@@ -61,8 +59,8 @@
         overflow: hidden;
         overflow: auto;
 
-        @media screen and (max-width: 1200px) {
-            padding: 20px;
-        }
+        // @media screen and (max-width: 1200px) {
+        //     padding: 20px;
+        // }
     }
 }

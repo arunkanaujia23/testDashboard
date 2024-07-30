@@ -2,9 +2,8 @@
 import React, { Children, useState } from 'react'
 import styles from './dashboardLayout.module.scss'
 import { Sidebar, SidebarMobile } from '../Sidebar/Sidebar'
-// import  { Sidebar, SidebarMobile } from '../BusinessComponent/Sidebar/Sidebar'
-// const Sidebar = () => (`SideBar`)
-// const SidebarMobile = () => (`SidebarMobile`)
+import DashboardBottomBar from '../DashboardBottomBar/DashboardBottomBar'
+
 
 
 const DashboardLayout = ({ children }) => {
@@ -22,7 +21,9 @@ const DashboardLayout = ({ children }) => {
                 <div className={styles.dashboardTopbar}>
                     <div className={styles?.menuButtonAndTitle}>
                         <div className={styles?.menuButton} onClick={handleToggleSideBar}>|||</div>
-                        <div className={styles.brandTitle}>Fareskhalifa.com</div>
+                        <div className={styles.searchContainer}>
+                            <input type="search" placeholder='Search....' />
+                        </div>
                     </div>
 
                     <div className={styles.topButtonContainer}>
@@ -61,7 +62,7 @@ const DashboardLayout = ({ children }) => {
                     </div>
                 </div>
                 <div className={styles.dashboardContent}>{children}</div>       
-                <div>BottomBar</div>    
+                <DashboardBottomBar/>  
             </div>
 
         </div>

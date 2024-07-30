@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Dashboard from "./Components/Dashboard/Dashboard";
+
+import DashboardHome from "./Components/DashboardHome/DashboardHome";
 
 export default function Home() {
   return (
@@ -93,6 +94,6 @@ export default function Home() {
     //   </div>
     // </main>
 
-    <Dashboard/>
+    <DashboardHome/>
   );
 }
