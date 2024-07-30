@@ -1,0 +1,68 @@
+.dashboardLayoutContainer {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    @media screen and (max-width: 992px) {
+        grid-template-columns: 1fr;
+        
+    }
+    .dashboardTopbar {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ECECEC;
+        background: #FFF;
+        padding: 12px 35px;
+        @media screen and (max-width: 768px) {
+            padding: 10px;
+       }
+        .menuButtonAndTitle{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            cursor: pointer;
+            .menuButton{
+                display: none;
+                @media screen and (max-width: 992px) {
+                     display: block;
+                }
+            }
+        }
+        .brandTitle {
+            color: var(--Primary-color, #333);
+            font-family: var(--Mulish);
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            @media screen and (max-width: 576px) {
+                display: none;
+           }
+        }
+
+        .topButtonContainer {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .topButton {
+                width: 40px;
+                height: 40px;
+                background-color: #F5F7FA;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 502%;
+            }
+        }
+    }
+
+    .dashboardContent{
+        height: calc(100vh - 200px);
+        padding: 45px;
+        overflow: hidden;
+        overflow: auto;
+
+        @media screen and (max-width: 1200px) {
+            padding: 20px;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import styles from './sidebar.module.css'
+import styles from './sidebar.module.scss'
 // import Logo from '@/assets/images/business/logo.svg'
 import Image from 'next/image'
 // import DashboardIcon from './SVGIcon/DashboardIcon'
