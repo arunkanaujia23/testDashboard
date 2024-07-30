@@ -1,9 +1,10 @@
 'use client'
 import React, { Children, useState } from 'react'
 import styles from './dashboardLayout.module.css'
+import { Sidebar, SidebarMobile } from '../Sidebar/Sidebar'
 // import  { Sidebar, SidebarMobile } from '../BusinessComponent/Sidebar/Sidebar'
-const Sidebar = () => (`SideBar`)
-const SidebarMobile = () => (`SidebarMobile`)
+// const Sidebar = () => (`SideBar`)
+// const SidebarMobile = () => (`SidebarMobile`)
 
 
 const DashboardLayout = ({ children }) => {

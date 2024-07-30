@@ -1,0 +1,73 @@
+.dashboardLayoutContainer {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+}
+@media screen and (max-width: 992px) {
+    .dashboardLayoutContainer {
+        grid-template-columns: 1fr;
+   }
+}
+.dashboardLayoutContainer .dashboardTopbar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+    padding: 12px 35px;
+}
+@media screen and (max-width: 768px) {
+    .dashboardLayoutContainer .dashboardTopbar {
+        padding: 10px;
+   }
+}
+.dashboardLayoutContainer .dashboardTopbar .menuButtonAndTitle {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+}
+.dashboardLayoutContainer .dashboardTopbar .menuButtonAndTitle .menuButton {
+    display: none;
+}
+@media screen and (max-width: 992px) {
+    .dashboardLayoutContainer .dashboardTopbar .menuButtonAndTitle .menuButton {
+        display: block;
+   }
+}
+.dashboardLayoutContainer .dashboardTopbar .brandTitle {
+    color: var(--Primary-color, #333);
+    font-family: var(--Mulish);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+@media screen and (max-width: 576px) {
+    .dashboardLayoutContainer .dashboardTopbar .brandTitle {
+        display: none;
+   }
+}
+.dashboardLayoutContainer .dashboardTopbar .topButtonContainer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.dashboardLayoutContainer .dashboardTopbar .topButtonContainer .topButton {
+    width: 40px;
+    height: 40px;
+    background-color: #f5f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 502%;
+}
+.dashboardLayoutContainer .dashboardContent {
+    height: calc(100vh - 65px);
+    padding: 45px;
+    overflow: hidden;
+    overflow: auto;
+}
+@media screen and (max-width: 1200px) {
+    .dashboardLayoutContainer .dashboardContent {
+        padding: 20px;
+   }
+}
