@@ -11,7 +11,7 @@
         justify-content: space-between;
         border-bottom: 1px solid #ECECEC;
         background: #FFF;
-        padding: 12px 35px;
+        padding: 12px 5px;
         @media screen and (max-width: 768px) {
             padding: 10px;
        }
@@ -55,7 +55,7 @@
 
     .dashboardContent{
         height: calc(100vh - 200px);
-        padding: 45px;
+        padding: 25px;
         overflow: hidden;
         overflow: auto;
 
