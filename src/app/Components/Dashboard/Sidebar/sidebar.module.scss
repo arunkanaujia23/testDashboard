@@ -1,155 +1,184 @@
 .sidebarContainer {
-    width: 240px;
-    // height: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 60px 25px;
+  width: 240px;
+  // height: 100vh;
+  background-color: #333;
+  color: #fff;
+  padding: 60px 25px;
+  position: relative;
+  @media screen and (max-width: 1200px) {
+    width: 200px;
+    padding: 40px 10px;
+  }
+  @media screen and (max-width: 992px) {
+    display: none;
+    //     transform: translateX(-200px);
+  }
+
+  .sidebarLogo {
+    align-items: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidebarLinks {
+    padding: 40px 0px;
+    list-style-type: none;
+
     position: relative;
+  }
+  .sidebarLinks > .sidebarLink {
+    //  padding: 15px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .sidebarLinks > .sidebarLink > a {
+    padding: 15px;
+    font-family: var(--Mulish);
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px auto;
     @media screen and (max-width: 1200px) {
-      width: 200px;
-      padding: 40px  10px;
-    }
-    @media screen and (max-width: 992px) {
-       display: none;
-  //     transform: translateX(-200px);
-   }
-  
-    .sidebarLogo {
-      position: relative;
-      height: 100px;
-      width: auto;
-    }
-  
-  
-    
-    .sidebarLinkContainer {
-      position: absolute;
-      bottom: 10px;
-      .sidebarLinks {
-      
-        list-style-type: none;
-        padding: 0;
-        position: relative;
-      }
-      .sidebarLinks > .sidebarLink {
-        //    padding: 15px;
-        cursor: pointer;
-        position: relative;
-      }
-    
-    
-      .sidebarLinks > .sidebarLink > a {
-        padding: 15px;
-        font-family: var(--Mulish);
-        font-size: 16px;
-        font-weight: 600;
-        color: #fff;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        @media screen and (max-width: 1200px) {
-          font-size: 14px;
-        }
-      }
-      .sidebarLinks > .sidebarLink:hover > a {
-        color: #00b67a;
-      }
-  
-      .sidebarLink.active {
-        background: #fff;
-        border-radius: 12px 0 0 12px;
-        a {
-          color: #00b67a;
-        }
-      }
-     
+      font-size: 14px;
     }
   }
-  
-  
-  
-  
-  .sidebarMobileContainer {
-       width: 200px;
-       height: 100%;
-       background-color: #333;
-       color: #fff;
-       padding: 40px 10px;
-       position: absolute;
-       z-index: 99;
-       transition: all 3s ease-in-out;
-       transform: translateX(-200px);
-      
-       
-  //      @media screen and (max-width: 992px) {
-  //         display: none;
-  //    //     transform: translateX(-200px);
-  //     }
-     
-       .sidebarMobileLogo {
-         position: relative;
-         height: 100px;
-         width: auto;
-       }
-     
-       .sidebarLinkContainer {
-        position: absolute;
-        bottom: 10px;
-        .sidebarLinks {
-        
-          list-style-type: none;
-          padding: 0;
-          position: relative;
-        }
-        .sidebarLinks > .sidebarLink {
-          //    padding: 15px;
-          cursor: pointer;
-          position: relative;
-        }
-      
-      
-        .sidebarLinks > .sidebarLink > a {
-          padding: 15px;
-          font-family: var(--Mulish);
-          font-size: 16px;
-          font-weight: 600;
-          color: #fff;
-          text-decoration: none;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          @media screen and (max-width: 1200px) {
-            font-size: 14px;
-          }
-        }
-        .sidebarLinks > .sidebarLink:hover > a {
-          color: #00b67a;
-        }
-    
-        .sidebarLink.active {
-          background: #fff;
-          border-radius: 12px 0 0 12px;
-          a {
-            color: #00b67a;
-          }
-        }
-       
+  .sidebarLinks > .sidebarLink:hover > a {
+    color: #00b67a;
+    background-color: white;
+    border-radius: 8px;
+    svg{
+      fill: #00b67a;
+    }
+  }
+
+  .sidebarLink.active {
+    background: #fff;
+    border-radius: 8px;
+    a {
+      color: #00b67a;
+      svg{
+        fill: #00b67a;
       }
-     
-       
-      
-     }
-  
-     .bgSidebar{
-       position: absolute;
-       top: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       background-color: #67676785;
-       z-index: 9;
-     }
-     .sidebarMobileContainer.active{
-       transform: translateX(0);
-     }
+    }
+  }
+
+  .sidebarLogoutButton {
+    position: absolute;
+    bottom: 50px;
+    a {
+      padding: 12px;
+      background-color: #f5fffd;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 150px;
+      border-radius: 12px;
+    }
+  }
+}
+
+.sidebarMobileContainer {
+  width: 200px;
+  height: 100vh;
+  background-color: #333;
+  color: #fff;
+ 
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  transition: all 3s ease-in-out;
+  transform: translateX(-200px);
+
+
+
+  .sidebarMobileLogo {
+    padding: 20px;
+  }
+
+  .sidebarMobileLinks {
+    padding: 20px ;
+    list-style-type: none;
+
+    position: relative;
+  }
+  .sidebarMobileLinks > .sidebarMobileLink {
+    //    padding: 15px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .sidebarMobileLinks > .sidebarMobileLink > a {
+    padding: 15px;
+    font-family: var(--Mulish);
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px auto;
+    @media screen and (max-width: 1200px) {
+      font-size: 14px;
+    }
+  }
+  .sidebarMobileLinks > .sidebarMobileLink:hover > a {
+    color: #00b67a;
+    background-color: white;
+    border-radius: 8px;
+
+    svg {
+      fill: #00b67a;
+    }
+  }
+
+
+  .sidebarMobileLink.active {
+    background: #fff;
+    border-radius: 12px;
+    a {
+      color: #00b67a;
+      svg{
+        fill: #00b67a;
+      }
+    }
+   
+  }
+
+  .sidebarMobileLogoutButton {
+    position: absolute;
+    padding: 20px;
+    bottom: 50px;
+    a {
+      padding: 12px;
+      background-color: #f5fffd;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 120px;
+      border-radius: 12px;
+    }
+  }
+}
+
+.bgSidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #67676785;
+  z-index: 9;
+}
+.sidebarMobileContainer.active {
+  transform: translateX(0);
+}
